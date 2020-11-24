@@ -1,0 +1,29 @@
+.table, .table td, .table th {
+  font-size: 16px;
+  border: 1px solid #aaa;
+}
+
+.notStarted {
+  color: #c0392b;
+}
+
+.completed {
+  background: #aacab8;
+  color: #0d4d40;
+}
+
+.actions td:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  border: 1px dotted #524d2f;
+  padding: auto 20px;
+  background: #f2eed3;
+  transition: all 300ms ease-in-out;
+}
+
+.actions td svg:hover {
+  cursor: pointer;
+  opacity: 75%;
+}
