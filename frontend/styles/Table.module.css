@@ -4,24 +4,30 @@
 }
 
 .notStarted {
+  background: #FBE7E5;
   color: #c0392b;
 }
 
+.progress {
+  background: #D4E5F4;
+  color: #103c5a;
+}
+
 .completed {
-  background: #aacab8;
+  background: #D2E0D8;
   color: #0d4d40;
 }
 
-.actions td:first-child {
+/* .actions td:first-child {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 
-  border: 1px dotted #524d2f;
+  border: 1px dotted #302b0f;
   padding: auto 20px;
   background: #f2eed3;
   transition: all 300ms ease-in-out;
-}
+} */
 
 .actions td svg:hover {
   cursor: pointer;

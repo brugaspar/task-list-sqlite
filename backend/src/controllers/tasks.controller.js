@@ -10,6 +10,7 @@ module.exports = {
       title,
       description,
       status,
+      user_id: request.userId,
       created_at: moment().format('YYYY-MM-DD HH:mm:ss'),
       updated_at: moment().format('YYYY-MM-DD HH:mm:ss')
     }
@@ -23,7 +24,7 @@ module.exports = {
     const id = request.params.id
     const taskData = request.body
 
-    const storedTask = await connection('tasks').where({ id }).first()
+    const storedTask = await connection('tasks').where({ id, user_id: request.userId }).first()
 
     if (!storedTask) return response.sendStatus(422)
 
@@ -37,7 +38,7 @@ module.exports = {
   async delete(request, response) {
     const id = request.params.id
 
-    const storedTask = await connection('tasks').where({ id }).delete()
+    const storedTask = await connection('tasks').where({ id, user_id: request.userId }).delete()
 
     if (!storedTask) return response.sendStatus(422)
 
@@ -45,7 +46,7 @@ module.exports = {
   },
 
   async index(request, response) {
-    const tasks = await connection('tasks')
+    const tasks = await connection('tasks').where({ user_id: request.userId })
 
     return response.status(200).json(tasks)
   },
@@ -53,7 +54,7 @@ module.exports = {
   async show(request, response) {
     const id = request.params.id
 
-    const task = await connection('tasks').where({ id }).first()
+    const task = await connection('tasks').where({ id, user_id: request.userId }).first()
 
     if (!task) return response.sendStatus(422)
 

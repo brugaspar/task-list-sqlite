@@ -1,6 +1,6 @@
 export const StatusName = {
-  "NOT_STARTED": "Não iniciado",
-  "IN_PROGRESS": "Em andamento",
+  "NOT_STARTED": "Pendente",
+  "IN_PROGRESS": "Andamento",
   "COMPLETED": "Completo",
   "CANCELLED": "Cancelado"
 }

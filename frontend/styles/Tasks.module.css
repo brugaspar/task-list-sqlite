@@ -1,3 +1,9 @@
+.header, .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .title {
   padding: 25px 0;
 

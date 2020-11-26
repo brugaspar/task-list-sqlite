@@ -8,12 +8,12 @@ const uuidGenerationRaw = `
 `
 
 exports.up = function (knex) {
-  return knex.schema.createTable('tasks', table => {
+  return knex.schema.createTable('users', table => {
     table.uuid('id').primary().defaultTo(knex.raw(uuidGenerationRaw))
 
-    table.string('title').notNullable()
-    table.string('description').notNullable()
-    table.string('status').notNullable()
+    table.string('name').notNullable()
+    table.string('email').notNullable()
+    table.string('password').notNullable()
 
     table.timestamp('created_at').notNullable()
     table.timestamp('updated_at').notNullable()
@@ -21,5 +21,5 @@ exports.up = function (knex) {
 }
 
 exports.down = function (knex) {
-  return knex.schema.dropTable('tasks')
+  return knex.schema.dropTable('users')
 }
