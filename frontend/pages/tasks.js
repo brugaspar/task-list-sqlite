@@ -152,8 +152,7 @@ const TaskList = () => {
   return (
     <div className="container">
       <Head>
-        <title>Lista de Tarefas</title>
-        <link rel="image/ico" href="../public/favicon.ico" />
+        <title>Task Lists | Dashboard</title>
       </Head>
 
       <div className={styles.header}>

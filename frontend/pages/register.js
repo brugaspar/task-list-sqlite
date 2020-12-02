@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
@@ -25,6 +26,9 @@ const Register = () => {
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100vh' }}>
+      <Head>
+        <title>Task List | Register</title>
+      </Head>
       <form onSubmit={handleRegister}>
         <div className="form-group">
           <label htmlFor="name">Seu nome</label>

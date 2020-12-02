@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
@@ -35,6 +36,9 @@ const Login = () => {
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100vh' }}>
+      <Head>
+        <title>Task List | Login</title>
+      </Head>
       <form onSubmit={handleLogin}>
         <div className="form-group">
           <label htmlFor="email">E-mail</label>
