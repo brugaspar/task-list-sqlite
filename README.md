@@ -2,7 +2,9 @@
 
 ### Aula - 11/11/2020 - 19/11/2020
 
-<div style="border: 2px solid black; height: 50px; padding: 15px">
-  <b>Lista de Tarefas</b>
-  <p>Criar uma lista de tarefas</p>
-</div>
+---
+##### Lista de Tarefas
+
+- Usando SQLite como banco de dados
+- Usando Next.js no frontend
+- Possui tela de login, cadastro e tela das tarefas do usuário
